@@ -67,7 +67,8 @@
                     url: location.pathname + "/update_checkStatusAll",
                     contentType: "application/json; charset=utf-8",
                     data: "{ 'idxs':" + "'" + idxs + "'" + ", 'curStatus':" + "'" + curStatus + "'" + "}",
-                    success: () => alert(strSuccess),
+                    dataType: "json",
+                    success: (data) => alert(data.d),
                     error: () => alert(strFail),
                     complete: () => location.reload() 
                 })

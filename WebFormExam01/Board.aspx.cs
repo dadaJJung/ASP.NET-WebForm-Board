@@ -47,7 +47,7 @@ namespace WebFormExam01
         }
 
         [WebMethod]
-        public static void update_checkStatusAll(string idxs, string curStatus)
+        public static string update_checkStatusAll(string idxs, string curStatus)
         {
 
             SqlConnection con = new SqlConnection();
@@ -60,6 +60,8 @@ namespace WebFormExam01
             cmd.Parameters.AddWithValue("@curStatus", curStatus);
             cmd.ExecuteNonQuery();
             con.Close();
+
+            return "SUCCESS";
 
         }
 
