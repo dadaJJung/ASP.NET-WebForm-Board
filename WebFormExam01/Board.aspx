@@ -98,6 +98,13 @@
         </div>
 
 
+        <div>
+            <asp:DropDownList ID="ddl_pagesize" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="ddl_pagesize_SelectedIndexChanged">
+                <asp:ListItem Value="3" Text="3" Selected="True"></asp:ListItem>
+                <asp:ListItem Value="5" Text="5"></asp:ListItem>
+            </asp:DropDownList>
+        </div>
+
     <table border="1px solid black">
         <thead>
             <tr>
